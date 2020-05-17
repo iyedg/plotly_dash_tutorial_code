@@ -2,11 +2,8 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 
-import numpy as np
-
-from .data import geo_targa_covid_df, by_gov_indicators, last_update
+from .data import by_gov_indicators, geo_targa_covid_df, last_update
 from .plots import plot_part_of_daily_active_cases
-
 
 SIDEBAR_STYLE = {
     "position": "fixed",
@@ -18,7 +15,7 @@ SIDEBAR_STYLE = {
     "background-color": "#f8f9fa",
 }
 
-MAIN_CONTAINER_STLE = {
+MAIN_CONTAINER_STYLE = {
     "margin-left": "18rem",
     "margin-right": "2rem",
     "padding": "2rem 1rem",
@@ -96,6 +93,7 @@ info = html.Div(
     ],
     style={"padding-top": "3rem"},
 )
+
 sidebar = html.Div(
     [
         html.H3("COVID19 dashboard for cases in Tunisia"),
@@ -110,7 +108,6 @@ sidebar = html.Div(
     style=SIDEBAR_STYLE,
 )
 
-random_df_data = np.random.randint(0, 100, 1000).reshape((500, 2))
 header = dbc.Alert(
     [
         html.H5("Disclaimer", className="alert-heading"),
@@ -142,7 +139,7 @@ main_container = dbc.Container(
             )
         ),
     ],
-    style=MAIN_CONTAINER_STLE,
+    style=MAIN_CONTAINER_STYLE,
     id="main_container",
 )
 

@@ -1,5 +1,4 @@
 from dash.dependencies import Input, Output
-import dash_core_components as dcc
 from .app import app
 
 from .plots import (
@@ -7,7 +6,7 @@ from .plots import (
     plot_part_of_daily_active_cases,
     plot_race_plot_of_cumulative_daily_active_cases,
 )
-from .data import targa_covid_df, geo_targa_covid_df
+from .data import geo_targa_covid_df
 
 
 @app.callback(
