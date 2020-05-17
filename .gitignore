@@ -18,12 +18,14 @@ ipython_config.py
 
 ### VisualStudioCode ###
 .vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 
 # End of https://www.gitignore.io/api/jupyternotebooks,visualstudiocode
-
-.venv
-.mypy_cache
+n
